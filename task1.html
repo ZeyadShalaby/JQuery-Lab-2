@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+
+    <div class="container"> 
+        <div class="blackbox">
+            Blackhole
+        </div>
+    </div> 
+
+    <div class="buggs">
+        <img src="2.jpg">
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script src="../Day2/jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/">
+  </script>
+  <script src="../Day2/jquery-ui.min.js"></script>
+
+  <script>
+
+    $(function(){
+        $("img").on("click", function(){
+            $("img").effect("shake");
+        })
+        $(".buggs").draggable();
+        $(".blackbox").droppable({
+            drop: function(event, ui){
+                $(".bugs").hide();
+            }
+        })
+    })
+
+  </script>
+    
+</body>
+</html>
